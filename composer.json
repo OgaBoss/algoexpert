@@ -1,0 +1,13 @@
+{
+    "name": "oluwadamilolaadebayo/php",
+    "description": "Learning all algoexpert algorithims",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "oluwadamilolaadebayo",
+            "email": "goshensoftinc@gmail.com"
+        }
+    ],
+    "require": {}
+}
