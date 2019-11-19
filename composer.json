@@ -9,5 +9,8 @@
             "email": "goshensoftinc@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^8"
+    }
 }
