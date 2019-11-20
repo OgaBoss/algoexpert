@@ -45,9 +45,9 @@ class BinarySearchRecursion
         if ($potentialMatch == $this->target) {
             return $middle;
         } elseif ($this->target > $potentialMatch) {
-            return self::binarySearchHelper($left + 1, $right);
+            return self::binarySearchHelper($middle + 1, $right);
         } else {
-            return self::binarySearchHelper($left, $right - 1);
+            return self::binarySearchHelper($left, $middle - 1);
         }
     }
 
