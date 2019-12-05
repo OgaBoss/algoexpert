@@ -1,7 +1,6 @@
 <?php
-
-
 use PHPUnit\Framework\TestCase;
+
 use Src\Algorithm\BubbleSort;
 class BubbleSortTest extends TestCase
 {
