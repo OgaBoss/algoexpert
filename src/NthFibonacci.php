@@ -17,9 +17,9 @@ class NthFibonacci
     public function recursive($number)
     {
         if ($number === 1) {
-            return 1;
+            return 0;
         } elseif ($number === 2) {
-            return 2;
+            return 1;
         } else {
             return $this->recursive($number - 1) + $this->recursive($number - 2);
         }
