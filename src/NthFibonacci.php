@@ -49,19 +49,17 @@ class NthFibonacci
      * @return mixed
      */
     public function optimized($number) {
+        $sequence = [0, 1];
         $lastTwo = [0, 1];
         $counter = 3;
          while ($counter <= $number) {
              $nextFib = $lastTwo[0] + $lastTwo[1];
              $lastTwo[0] = $lastTwo[1];
              $lastTwo[1] = $nextFib;
+             $sequence[] = $nextFib;
              $counter++;
          }
 
-         if ($number > 1) {
-             return $lastTwo[1];
-         }
-
-         return $lastTwo[0];
+         return implode(',', $sequence);
     }
 }

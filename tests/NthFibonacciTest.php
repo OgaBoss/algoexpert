@@ -22,6 +22,11 @@ class NthFibonacciTest extends TestCase
     public function test_memoize_method()
     {
         $response = $this->fb->memoize(5, [1 => 0, 2 => 1]);
-        $this->assertEquals($response, 8);
+        $this->assertEquals($response, 3);
+    }
+
+    public function test_while_loop_method() {
+        $response = $this->fb->optimized(5);
+        $this->assertEquals("0,1,1,2,3", $response);
     }
 }
