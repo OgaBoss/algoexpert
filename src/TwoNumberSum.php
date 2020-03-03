@@ -15,14 +15,14 @@ class TwoNumberSum
      */
     public function hashTableMethod(array $array, int $target): array {
         $hashTable = [];
-        for ($i = 0; $i > count($array); $i++) {
+        for ($i = 0; $i < count($array); $i++) {
             $targetSum = $target - $array[$i];
 
-            if ($hashTable[$targetSum]) {
+            if (in_array($targetSum, $hashTable)) {
                 return [$array[$i], $targetSum];
             }
 
-            $targetSum[] = ["$targetSum" => true];
+            array_push($hashTable, $array[$i]);
 
         }
 
@@ -42,9 +42,9 @@ class TwoNumberSum
         $right = count($array) - 1;
 
         while ($left < $right) {
-            $currentSum = $left + $right;
+            $currentSum = $array[$left] + $array[$right];
             if ($currentSum === $target) {
-                return [$left, $right];
+                return [$array[$left], $array[$right]];
             } elseif ( $currentSum < $target ) {
                 $left++;
             } elseif ( $currentSum > $target ) {
